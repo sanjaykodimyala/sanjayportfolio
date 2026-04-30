@@ -1067,40 +1067,7 @@
   }
 
   .hero-visual {
-    min-height: 235px;
-    order: initial;
-    border-radius: 8px;
-  }
-
-  .hero-visual::before {
-    inset: 14%;
-  }
-
-  .hero-image-panel {
-    width: min(48%, 165px);
-  }
-
-  .stat-card {
-    width: 116px;
-    padding: 10px;
-  }
-
-  .stat-card.top {
-    top: 14px;
-    right: 12px;
-  }
-
-  .stat-card.bottom {
-    left: 12px;
-    bottom: 14px;
-  }
-
-  .stat-card strong {
-    font-size: 1.16rem;
-  }
-
-  .stat-card span {
-    font-size: 0.72rem;
+    display: none;
   }
 
   .section {
@@ -1193,16 +1160,7 @@
   }
 
   .hero-visual {
-    min-height: 220px;
-  }
-
-  .stat-card {
-    width: 104px;
-    font-size: 0.78rem;
-  }
-
-  .stat-card strong {
-    font-size: 1.2rem;
+    display: none;
   }
 
   .skills-list {
