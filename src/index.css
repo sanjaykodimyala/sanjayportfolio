@@ -197,6 +197,26 @@ p {
 }
 
 @media (max-width: 640px) {
+  body {
+    background:
+      linear-gradient(145deg, rgba(56, 189, 248, 0.1), transparent 34%),
+      linear-gradient(180deg, var(--hero-bg) 0 760px, var(--page-bg) 760px),
+      var(--page-bg);
+    background-attachment: scroll;
+  }
+
+  body::before {
+    background-size:
+      42px 42px,
+      42px 42px,
+      240px 240px;
+    opacity: 0.58;
+  }
+
+  body::after {
+    display: none;
+  }
+
   h1 {
     font-size: clamp(2.18rem, 11vw, 3.2rem);
   }

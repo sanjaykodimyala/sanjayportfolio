@@ -973,47 +973,78 @@
 
 @media (max-width: 640px) {
   .site-shell {
-    padding: 12px;
+    padding: 12px 14px 20px;
   }
 
   .navbar {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    padding: 12px;
     position: static;
   }
 
   .navbar nav {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    justify-content: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .navbar nav::-webkit-scrollbar {
+    display: none;
   }
 
   .navbar nav a,
   .theme-toggle {
-    padding: 9px 10px;
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 7px 11px;
+    font-size: 0.82rem;
     text-align: center;
+    white-space: nowrap;
   }
 
   .theme-toggle {
-    width: 100%;
+    width: auto;
   }
 
   .brand {
     width: 100%;
+    font-size: 1rem;
+  }
+
+  .brand span {
+    min-width: 34px;
+    width: 34px;
   }
 
   .hero-section {
-    padding: 28px 0 48px;
+    gap: 24px;
+    padding: 32px 0 50px;
   }
 
   .hero-copy {
     max-width: none;
+    text-align: left;
+  }
+
+  .hero-title {
+    gap: 7px;
+    margin-top: 12px;
+    font-size: clamp(1.28rem, 7vw, 1.78rem);
+  }
+
+  .hero-title span {
+    width: auto;
   }
 
   .hero-text {
+    margin-top: 18px;
     font-size: 1.04rem;
+    line-height: 1.58;
   }
 
   .sliding-role {
@@ -1031,31 +1062,57 @@
     width: 100%;
   }
 
+  .hero-actions {
+    margin-top: 24px;
+  }
+
   .hero-visual {
-    min-height: 270px;
+    min-height: 235px;
+    order: initial;
+    border-radius: 8px;
+  }
+
+  .hero-visual::before {
+    inset: 14%;
   }
 
   .hero-image-panel {
-    width: min(58%, 220px);
+    width: min(48%, 165px);
   }
 
   .stat-card {
-    width: 142px;
-    padding: 11px;
+    width: 116px;
+    padding: 10px;
   }
 
   .stat-card.top {
-    top: 18px;
-    right: 14px;
+    top: 14px;
+    right: 12px;
   }
 
   .stat-card.bottom {
-    left: 14px;
-    bottom: 18px;
+    left: 12px;
+    bottom: 14px;
+  }
+
+  .stat-card strong {
+    font-size: 1.16rem;
+  }
+
+  .stat-card span {
+    font-size: 0.72rem;
   }
 
   .section {
-    padding: 46px 0;
+    padding: 48px 0;
+  }
+
+  .section-heading.centered {
+    text-align: left;
+  }
+
+  .section-heading.centered h2::after {
+    margin-inline: 0;
   }
 
   .highlight-marquee {
@@ -1088,12 +1145,36 @@
     padding: 20px;
   }
 
+  .summary-card {
+    padding: 18px;
+  }
+
+  .summary-card h3 {
+    font-size: 1.38rem;
+  }
+
+  .summary-card p {
+    font-size: 0.98rem;
+    line-height: 1.58;
+  }
+
+  .summary-action {
+    width: 100%;
+  }
+
   .skills-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .skills-list li {
+    min-height: 50px;
+    padding: 10px;
+    font-size: 0.9rem;
   }
 
   .contact-section {
-    padding: 24px;
+    padding: 22px;
   }
 
   .contact-grid {
@@ -1107,20 +1188,16 @@
 }
 
 @media (max-width: 420px) {
-  .navbar nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .hero-actions {
     gap: 10px;
   }
 
   .hero-visual {
-    min-height: 240px;
+    min-height: 220px;
   }
 
   .stat-card {
-    width: 126px;
+    width: 104px;
     font-size: 0.78rem;
   }
 
